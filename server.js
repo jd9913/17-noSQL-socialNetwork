@@ -2,6 +2,8 @@ const express=require('express');
 const logger=require('./logger.js');
 const mongoose=require('mongoose');
 
+const morgan=require('morgan');
+
 const app=express();
 
 const PORT =process.env.PORT||33031;
@@ -20,5 +22,5 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/social-networki
 
 mongoose.set('debug', true);
 
-app.listen(PORT, ()=> console.log(`Connected on localhost:${PORT}`));
+app.listen(PORT, ()=> console.log(`Connected on localhost: ${PORT}`));
 
