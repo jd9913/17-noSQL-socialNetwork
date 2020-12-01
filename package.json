@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/jd9913/17-noSQL-socialNetwork#readme",
   "dependencies": {
+    "bunyan": "^1.8.14",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.17",
