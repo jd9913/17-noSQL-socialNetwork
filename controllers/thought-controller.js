@@ -6,15 +6,10 @@ const thoughtController = {
 
     getAllThoughts(req, res) {
         Thoughts.find({})
-            .populate({
-                path: 'reactions',
-                select: '-__v'
-            })
-            .select('-__v')
             .sort({ _id: -1 })
             .then(dbThoughtData => res.json(dbThoughtData))
-            .catch(err => {
-                res.sendStatus(400).json(err);
+            .catch((err) => {
+                res.status(500).json(err);
             });
     },
 
@@ -65,7 +60,15 @@ const thoughtController = {
     },
 
     updateThought({ params, body }, res) {
-        Thoughts.findOneAndUpdate({ _id: params.id }, body, { new: true })
+        Thoughts.findOneAndUpdate({ _id: params.id }, body, { 
+            new: true,
+            runValidators: true
+        })
+        .populate({
+            path: "reactions",
+            select: "-__v"
+        })
+        .select("-__v")
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
                     res.staus(404).json({ message: 'No thoughts found with this id!' });
@@ -90,12 +93,12 @@ const thoughtController = {
                     select: '-__v'
                 })
             .select('=__v')
-            .then(dbThoughtData => {
-                if (!dbThoughtData) {
+            .then(dbReactionData => {
+                if (!dbReactionData) {
                     res.status(404).json({ message: 'No thoughts found with this id!' });
                     return;
                 }
-                res.json(dbThoughtData);
+                res.json(dbReactionData);
             })
             .catch(err => res.json(err));
 
@@ -133,9 +136,9 @@ const thoughtController = {
             { $pull: { reactions: { reactionId: params.reactionId } } },
             { new: true }
         )
-            .then(dbThoughtData => {
-                if (!dbThoughtData) {
-                    res.json(dbThoughtData);
+            .then(dbReactionData => {
+                if (!dbReactionData) {
+                    res.json(dbReactionData);
                 }
             })
             .catch(err => res.json(err));
