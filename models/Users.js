@@ -11,7 +11,7 @@ const UsersSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        match:[/ ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/ ]
+        match:[/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ ]
        
     },
 
@@ -26,7 +26,7 @@ const UsersSchema = new Schema({
         {
             type: Schema.Types.ObjectId,
             ref: 'Users'
-        } 
+        }
     ]
 
 },
@@ -42,7 +42,7 @@ const UsersSchema = new Schema({
 //get total count of friends on retrieval
 
 UsersSchema.virtual('friendCount').get(function () {
-    return this.friends.reduce((total, friend)=>total+friend.reactions.length+1,0);
+    return this.friends.length;
 })
 
 const Users = model('Users', UsersSchema);

@@ -1,0 +1,30 @@
+[
+    {
+      "username": "mathwhiz",
+      "email": "mathwhiz@email.com",
+      
+      "friends": "lemonpoppy"
+     
+    },
+    {
+      "username": "lemonpoppy",
+      "email": "lemonpoppy@email.com",
+      
+      "friends": ""
+     
+    },
+    {
+      "username": "greentea",
+      "email": "greentea@email.com",
+      
+      "friends": ""
+     
+    },
+    {
+      "username": "fruitfly",
+      "email": "fruitfly@email.com",
+      
+      "friends": ""
+     
+    }
+   ]
