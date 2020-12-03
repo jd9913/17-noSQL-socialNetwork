@@ -115,11 +115,7 @@ addFriend({ params }, res){
         { $push: { friends: params.friendId }, body },
         { new: true, runValidators: true }
     )
-    .populate({
-        path: "friends",
-        select: "-__v",
-    })
-    .select("-__v")
+   
     .then((dbUserData)=>{
         if(!dbUserData){
             res
@@ -142,11 +138,7 @@ deleteFriend ({ params }, res){
         { $pull: { friends: params.friendId} },
         {new: true, runValidators: true }
     )
-    .populate({
-        path: "friends",
-        select: "-__v",
-    })
-    .select("-__v")
+
     .then((dbUserData)=>{
         if(!dbUserData){
             res
