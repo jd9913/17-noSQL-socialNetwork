@@ -25,6 +25,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/social-networki
 });
 
 mongoose.set('debug', true);
+mongoose.set('useCreateIndes', true);
 
 
 app.use('/api-docs', swaggerUi.serve,
