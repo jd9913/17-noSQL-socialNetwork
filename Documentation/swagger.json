@@ -1,8 +1,10 @@
+
 {
-    "swagger": "2.0",
+    "openapi": "3.0.0",
     "info": {
       "version": "0.0.1",
-      "title": "Social-Networking App"
+      "title": "Social-Networking App",
+      "description": "Mongo, Express, Nodejs App for Social Networking  Module 18 in bootcamp, figuring out documentation "
     },
     "host": "localhost:33031",
     "basePath": "/",
@@ -20,8 +22,8 @@
       "/users": {
         
         "get": {
-          "description": "Returns 'Hello' to the caller",
-          "operationId": "hello",
+          "description": "Gets All users from the Mongo DB",
+          "operationId": "users",
           "parameters": [
             {
               "name": "name",

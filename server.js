@@ -2,8 +2,7 @@ const express=require('express');
 const logger=require('./logger.js');
 const mongoose=require('mongoose');
 
-const swaggerUi=require('swagger-ui-express'),
-    swaggerDocument=require('./swagger.json');
+
 
 const morgan=require('morgan');
 const bunyan = require('bunyan');
@@ -25,11 +24,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/social-networki
 });
 
 mongoose.set('debug', true);
-mongoose.set('useCreateIndes', true);
+mongoose.set('useCreateIndex', true);
 
 
-app.use('/api-docs', swaggerUi.serve,
-swaggerUi.setup(swaggerDocument));
+
 
 app.listen(PORT, ()=> console.log(`Connected on localhost: ${PORT}`));
 
