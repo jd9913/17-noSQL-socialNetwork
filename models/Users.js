@@ -1,5 +1,41 @@
 const { Schema, model } = require('mongoose');
 
+/**
+ * @swagger
+ * components:
+ *  schemas:
+ *      Users:
+ *          type: Object
+ *              required:
+ *                  -username
+ *                  -email
+ *              optional:
+ *                  -thoughts
+ *                  -friends
+ *          properties:
+ *              name:
+ *                  type: String
+ *              email:
+ *                  type: String
+ *                  format: email
+ *                  description: Unique email for the user
+ *              thoughts:
+ *                  type: Object
+ *                  format: text
+ *                  description: Thoughts of the user, including friends reactions
+ *              friends:
+ *                  type: String
+ *                  description: array of userId of other users listed as friends
+ *          example:
+ *              username: mathwhiz
+ *              email: mathwhiz@email.com
+ *              thoughts: [thoughtSchema]
+ *                  
+ *                  
+ */
+
+
+
 const UsersSchema = new Schema({
     username: {
         type: String,
