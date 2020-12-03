@@ -1,25 +1,22 @@
-const winston = require('winston');
- 
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.json(),
-  defaultMeta: { service: 'user-service' },
-  transports: [
-    //
-    // - Write all logs with level `error` and below to `error.log`
-    // - Write all logs with level `info` and below to `combined.log`
-    //
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
-  ],
+const bunyan=require('bunyan');
+
+
+exports.loggerInstance=bunyan.createLogger({
+  name: 'transaction-notifier',
+  serializers:{
+    req: require('bunyan-express-serializer'),
+    res: bunyan.stdSerializers.res,
+    err:bunyan.stdSerializers.err
+  },
+  level: 'info'
 });
- 
-//
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-//
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }));
+
+exports.logResponse=function(id, body, statusCode){
+  const log=this.loggerInstance.child({
+    id: id,
+    body: body,
+    statusCode: statusCode
+  }, true)
+  log.info('response')
+  
 }

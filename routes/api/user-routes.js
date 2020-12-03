@@ -11,9 +11,6 @@ const {
 
 }= require('../../controllers/user-controller');
 
-// const { create } = require('../../models/Users');
-
-
 
 
 //set up GET all and POST at /api/users
@@ -34,7 +31,7 @@ router
 
 
 router
-.route("/:id/friend/:friendId")
+.route("/:id/friend")
 .post(addFriend)
 .delete(deleteFriend);
 

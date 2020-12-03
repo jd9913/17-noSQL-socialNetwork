@@ -42,9 +42,7 @@ router
 .route('/:thoughtId/:reactionId')
 .delete(removeReaction);
 
-router
-.route('/:userId/:thoughtId/:reactionId')
-.delete(removeReaction);
+
 
 
 module.exports=router;

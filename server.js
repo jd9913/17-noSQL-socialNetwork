@@ -1,11 +1,11 @@
 const express=require('express');
-const logger=require('./logger.js');
+
 const mongoose=require('mongoose');
 
 
 
 const morgan=require('morgan');
-const bunyan = require('bunyan');
+
 
 const app=express();
 
@@ -22,6 +22,9 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/social-networki
     useUnifiedTopology:true
 
 });
+
+
+
 
 mongoose.set('debug', true);
 mongoose.set('useCreateIndex', true);

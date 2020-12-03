@@ -1,5 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
-const dateFormat = require('../utils/dateFormat'); //re-using file from the module prject
+const dateFormat = require('../utils/dateFormat'); //re-using file from the module project
 
 const ReactionSchema = new Schema(
     {
@@ -18,8 +18,8 @@ const ReactionSchema = new Schema(
 
         username: [
             {
-                type: String,
-               required: true
+                type: Schema.Types.ObjectId,
+                ref: 'Users'
             }
         ],
 
@@ -53,8 +53,8 @@ const ThoughtSchema = new Schema({
     },
     username: [
         {
-           type: String,
-           required: true
+            type: Schema.Types.ObjectId,
+            ref: 'Users'
         }
     ],
 
