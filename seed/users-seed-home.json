@@ -1,0 +1,87 @@
+[
+    {
+        "thoughts": [],
+        "friends": [],
+        "_id": "5fc2d445506e2632cc12d8a6",
+        "username": "mathwhiz",
+        "email": "mathwhiz@email.com",
+        "friendCount": 0
+    },
+    {
+        "thoughts": [],
+        "friends": [],
+        "_id": "5fc2d428aa54483f1cab5517",
+        "username": "mathwhiz",
+        "email": "mathwhiz@email.com",
+        "friendCount": 0
+    },
+    {
+        "thoughts": [],
+        "friends": [],
+        "_id": "5fc2d397aa54483f1cab5516",
+        "username": "mathwhiz",
+        "email": "mathwhiz@email.com",
+        "friendCount": 0
+    },
+    {
+        "thoughts": [
+            {
+                "username": [],
+                "_id": "5fc2f3d27bfc744da8225957",
+                "createdAt": "Nov 28th, 2020 at 18:5 pm",
+                "reactions": [],
+                "reactionCount": 0
+            }
+        ],
+        "friends": [],
+        "_id": "5fc2d375aa54483f1cab5515",
+        "username": "lemondrop",
+        "email": "lemondrop@email.com",
+        "friendCount": 0
+    },
+    {
+        "thoughts": [
+            {
+                "username": [],
+                "_id": "5fc2ea257bfc744da8225953",
+                "createdAt": "Nov 28th, 2020 at 17:24 pm",
+                "reactions": [],
+                "reactionCount": 0
+            },
+            {
+                "username": [],
+                "_id": "5fc2ea3b7bfc744da8225954",
+                "createdAt": "Nov 28th, 2020 at 17:24 pm",
+                "reactions": [],
+                "reactionCount": 0
+            },
+            {
+                "username": [],
+                "_id": "5fc2f3427bfc744da8225955",
+                "createdAt": "Nov 28th, 2020 at 18:2 pm",
+                "reactions": [],
+                "reactionCount": 0
+            },
+            {
+                "username": [],
+                "_id": "5fc2f3697bfc744da8225956",
+                "createdAt": "Nov 28th, 2020 at 18:3 pm",
+                "reactions": [],
+                "reactionCount": 0
+            }
+        ],
+        "friends": [],
+        "_id": "5fc2d35faa54483f1cab5514",
+        "username": "pookie",
+        "email": "pookie@email.com",
+        "friendCount": 0
+    },
+    {
+        "thoughts": [],
+        "friends": [],
+        "_id": "5fc2d2b6aa54483f1cab5513",
+        "username": "needles",
+        "email": "needles@email.com",
+        "friendCount": 0
+    }
+]
