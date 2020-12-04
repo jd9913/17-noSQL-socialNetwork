@@ -1,0 +1,49 @@
+[
+    {
+      "username": "mathwhiz",
+      "email": "mathwhiz@email.com",
+      
+      "friends": [{
+		  "username":"fruitfly, greentea"
+	  }],
+	  "thoughts":[{
+		  "thoughtText":"This is awesome!"
+	  }]
+     
+    },
+    {
+      "username": "lemonpoppy",
+      "email": "lemonpoppy@email.com",
+      
+      "friends": [{
+		  "username":"mathwhiz"
+	  }],
+	  "thoughts":[{
+		  "thoughtText":"This is mega awesome!"
+     
+    }]
+	},
+    {
+      "username": "greentea",
+      "email": "greentea@email.com",
+      
+      "friends": [
+		  "lemonpoppy, mathwhiz, fruitfly"
+		 
+	  ],
+	  "thoughts":[
+		  "thoughtText":"This day is just begun!"
+     
+    ]
+	},
+    {
+      "username": "fruitfly",
+      "email": "fruitfly@email.com",
+      
+      "friends": [{
+		  "username":"lemonpoppy, mathwhiz"
+	  }]
+     
+    }
+]
+   
