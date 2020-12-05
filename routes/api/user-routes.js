@@ -18,23 +18,23 @@ const {
 
 router
 .route('/')
-.get(getAllUsers)
-.post(createUser);
+.get(getAllUsers)  //working
+.post(createUser);  //working
 
 
 // /api/users/:id  
 router
-.route('/:userId')
-.get(getUserById)
-.put(updateUser)
-.delete(deleteUser);
+.route('/:id')
+.get(getUserById)  //not working--no user found with this id
+.put(updateUser)  //working
+.delete(deleteUser);  //working
 
 
 // API: /api/users/:userId/friends/:friendId
 router
 .route("/:userId/friends/:friendId")
-.post(addFriend)
-.delete(deleteFriend);
+.post(addFriend)  //working
+.delete(deleteFriend);//not working--no user found with this id
 
 module.exports=router;
 

@@ -15,14 +15,14 @@ const {
 // API: /api/thoughts
     router
     .route('/')
-    .get(getAllThoughts)
+    .get(getAllThoughts)  //working
     .post(addThought);
     
 //GET/PUT/DELETE thought by ID API: /api/thoughts/:id
 router
 .route('/:id')
-.get(getThoughtById)
-.put(updateThought)
+.get(getThoughtById)  //working
+.put(updateThought)  //not working
 .delete(removeThought)
 
 //API: /api/thoughts/:thoughtId/reactions
