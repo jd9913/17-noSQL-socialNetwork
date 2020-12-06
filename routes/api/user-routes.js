@@ -12,9 +12,7 @@ const {
 }= require('../../controllers/user-controller');
 
 
-
 //set up GET all and POST at /api/users
-
 
 router
 .route('/')
@@ -25,7 +23,7 @@ router
 // /api/users/:id  
 router
 .route('/:id')
-.get(getUserById)  //not working--no user found with this id
+.get(getUserById)  // working
 .put(updateUser)  //working
 .delete(deleteUser);  //working
 
