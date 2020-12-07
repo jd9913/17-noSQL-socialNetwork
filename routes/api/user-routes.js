@@ -25,7 +25,7 @@ router
 .route('/:id')
 .get(getUserById)  // working
 .put(updateUser)  //working
-.delete(deleteUser);  //working
+.delete(deleteUser);  //not working
 
 
 // API: /api/users/:userId/friends/:friendId

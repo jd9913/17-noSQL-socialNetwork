@@ -1,6 +1,6 @@
 const Users=require('./Users');
 
-const Thoughts=require('./Thoughts');
+const {Thoughts, Reactions}=require('./Thoughts');
 
 
 
@@ -11,7 +11,9 @@ const Thoughts=require('./Thoughts');
 
 
 
-module.exports={ Users, Thoughts }
+
+
+module.exports={ Users, Thoughts, Reactions }
 
 
 

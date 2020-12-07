@@ -3,11 +3,11 @@ const dateFormat = require('../utils/dateFormat'); //re-using file from the modu
 
 const ReactionSchema = new Schema(
     {
-        reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId()
+        // reactionId: {
+        //     type: Schema.Types.ObjectId,
+        //     default: () => new Types.ObjectId()
 
-        },
+        // },
 
         reactionBody: {
             type: String,
@@ -16,7 +16,7 @@ const ReactionSchema = new Schema(
 
         },
 
-        username: [
+        userId: [
             {
                 type: Schema.Types.ObjectId,
                 ref: 'Users'
@@ -79,5 +79,6 @@ ThoughtSchema.virtual('reactionCount').get(function () {
 //create the completed thoughts model with the schema
 
 const Thoughts = model('Thoughts', ThoughtSchema);
+const Reactions=model('Reactions', ReactionSchema);
 
-module.exports = Thoughts;
+module.exports = {Thoughts, Reactions};
